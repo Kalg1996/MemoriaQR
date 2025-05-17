@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacidad del Perfil - Memoria QR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .form-section {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-memorial {
+      background-color: #6f42c1;
+      color: white;
+    }
+
+    .btn-memorial:hover {
+      background-color: #59359d;
+      color: white;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Memoria QR</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 class="text-center">Configuración de privacidad del perfil</h2>
+
+  <div class="form-section">
+    <form>
+      <div class="mb-4">
+        <label for="visibilidad" class="form-label">¿Quién puede ver este perfil?</label>
+        <select class="form-select" id="visibilidad">
+          <option value="publico" selected>Público (visible para cualquiera)</option>
+          <option value="privado">Privado (solo usuarios autorizados)</option>
+          <option value="qr">Solo accesible con QR</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label for="editar" class="form-label">¿Quién puede editar este perfil?</label>
+        <input type="text" class="form-control mb-2" placeholder="Ej. ana.lopez@email.com">
+        <button type="button" class="btn btn-outline-secondary btn-sm">+ Añadir autorizado</button>
+
+        <ul class="list-group mt-3">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            ana.lopez@email.com
+            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            carlos.nieto@email.com
+            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label">Acceso por código QR</label>
+        <p class="quote">Podés generar un código QR que dirija directamente a este perfil.</p>
+        <button type="button" class="btn btn-outline-primary">Generar código QR</button>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-memorial btn-lg">Guardar configuración</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

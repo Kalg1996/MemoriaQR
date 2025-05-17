@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Perfil - Memoria QR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .btn-memorial {
+      background-color: #6f42c1;
+      color: white;
+    }
+
+    .btn-memorial:hover {
+      background-color: #5a379e;
+      color: white;
+    }
+
+    .form-label {
+      font-weight: 600;
+    }
+
+    .form-section {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .quote-hint {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Memoria QR</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="panel.html">Panel</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Crear Perfil</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 class="mb-4 text-center">Crear perfil conmemorativo</h2>
+
+  <div class="form-section">
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ej. María López">
+        </div>
+        <div class="col-md-3">
+          <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="fechaNacimiento">
+        </div>
+        <div class="col-md-3">
+          <label for="fechaFallecimiento" class="form-label">Fecha de fallecimiento</label>
+          <input type="date" class="form-control" id="fechaFallecimiento">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="frase" class="form-label">Frase conmemorativa</label>
+        <input type="text" class="form-control" id="frase" placeholder="Ej. Siempre presente en nuestros corazones">
+        <div class="quote-hint">Podés dejar una frase que represente al homenajeado.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="foto" class="form-label">Fotografía principal</label>
+        <input class="form-control" type="file" id="foto">
+      </div>
+
+      <div class="mb-3">
+        <label for="relacion" class="form-label">Tu relación con la persona</label>
+        <select class="form-select" id="relacion">
+          <option value="">Seleccionar</option>
+          <option>Padre/Madre</option>
+          <option>Hermano(a)</option>
+          <option>Abuelo(a)</option>
+          <option>Hijo(a)</option>
+          <option>Amigo(a)</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="privacidad" class="form-label">Privacidad del perfil</label>
+        <select class="form-select" id="privacidad">
+          <option value="publico">Público (accesible para todos)</option>
+          <option value="privado">Privado (solo con enlace o QR)</option>
+        </select>
+      </div>
+
+      <div class="d-grid">
+        <a href="perfil.html" class="btn btn-memorial btn-lg w-100">Guardar y continuar</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
